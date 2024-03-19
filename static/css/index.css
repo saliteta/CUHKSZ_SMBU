@@ -174,7 +174,7 @@ table, th, td {
 
 .carousel {
   flex: 1; /* Makes each carousel grow equally to fill the container */
-  /* You might want to add a max-width here to control the size */
+  height: auto;
 }
 
 /* Optional: Ensure the iframes inside the carousels take full width */
