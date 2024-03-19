@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" 
+  content="GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting">
+  <meta property="og:title" content="GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting"/>
+  <meta property="og:description" content="GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting"/>
+  <meta property="og:url" content="https://saliteta.github.io/CUHKSZ_SMBU/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static\images\GauU_V2_Dataset_Overview.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  
+  
+  <meta name="twitter:title" content="GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting">
+  <meta name="twitter:description" content="GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static\images\GauU_V2_Dataset_Overview.png">
+  <meta name="twitter:card" content="">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Gaussian Splatting, Butian, Large Scale, Dataset">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting</title>
+  <link rel="icon" type="image/x-icon" href="static\images\webpage_raw.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Optional: Bootstrap JS and its dependencies (jQuery and Popper) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<style>
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%; /* Adjust this value as needed */
+    }
+
+    h2.subtitle.has-text-centered {
+        margin-left: 30%; /* Adjust the margin as needed */
+        margin-right: 30%; /* Adjust the margin as needed */
+        text-align: center;
+    }
+</style>
+
+
+  
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">GauUscene</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="saliteta.github.io" target="_blank">Butian Xiong</a><sup>*</sup>,</span>
+              <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=ycgt5hMAAAAJ&hl=en" target="_blank">Zho Li</a>,</span>
+                <span class="author-block">
+                  <a href="https://mypage.cuhk.edu.cn/academics/lizhen/" target="_blank">Zhen Li</a>,</span>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">The Chinese University of Hong Kong, Shenzhen<br>Conferance name and year</span>
+                  </div>
+
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="https://github.com/saliteta/CUHKSZ_SMBU/blob/master/static/pdfs/U_Scene.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://cuhko365-my.sharepoint.com/:f:/g/personal/120090584_link_cuhk_edu_cn/EthvgXDXuIZDioyGBwThHQgBjD1_WM0JDuq2LGtPKmtOuA?e=0kEAui" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2401.14032" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce a novel large-scale scene reconstruction benchmark
+             using the newly developed 3D representation approach, Gaussian
+              Splatting, on our expansive U-Scene dataset. U-Scene encompasses
+               over one and a half square kilometers in the first version and
+                3.5 square kilometers in the second version, featuring a comprehensive
+                 RGB dataset coupled with LiDAR ground truth. The dataset 
+                 size is continually growing and now includes 6 scenarios. 
+                 For data acquisition, we employed the Matrix 300 drone 
+                 equipped with the high-accuracy Zenmuse L1 LiDAR, enabling 
+                 precise rooftop data collection. The detailed data acquisition
+                  protocol is appended in the supplementary material. 
+                  It contains drone assembly, controller path planning, 
+                  controller assembly, safety and protection, RTK Help, 
+                  Drone Data Post-Processing, and many other details. 
+                  U-Scene, developed under the auspices of the Chinese University of Hong Kong, 
+                  Shenzhen MSU-BIT University, SZIIT, and auxiliary residential area, offers a 
+                  unique blend of urban and academic environments for advanced spatial analysis. 
+                  Our evaluation of U-Scene with Gaussian Splatting includes a detailed 
+                  analysis across various novel viewpoints. We also juxtapose these 
+                  results with those derived from our accurate point cloud dataset, 
+                  highlighting significant differences that underscore the importance and innovation of our work.
+          </p>
+          <div class="column is-four-fifths">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<img src="static/images/dataset_preview.png" alt="MY ALT TEXT"/>
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <div class="content has-text-justified">
+  Our dataset is now publicly available via the link provided above. 
+  Our enlarged dataset is divided into six main parts. The first 
+  part is the top portion of this graph, referred to as SZIIT (The 
+  Shenzhen Institute of Information Technology). The second row is 
+  called the Lower Campus, an abbreviation for the Chinese University
+   of Hong Kong, Lower Campus. The third row displays the Upper Campus
+    of CUHKSZ, and the SMBU (Shenzhen MSU-BIT University) Campus. As 
+    for the last row, it contains two auxiliary residential areas 
+    named He Ao Village and LFLS(Longgang Foreign language school) We utilized highly accurate LiDAR 
+    to collect the dataset, covering a range of more than 1.5 km^2. To 
+    view the dataset from different angles, one can use the embedded 
+    Youtube video provided. We store the dataset in Ply format on the 
+    OneDrive share point link, with coordinates in WGS 84/ UTM zone 50N: 
+    EPSG:32650 geographic standard. To further facilitate usage in computer 
+    vision and graphics, we will also provide COLMAP datasets and aligned point clouds.
+    </div>
+  </div>
+</div>
+
+<img src="static/images/point_cloud.png" alt="MY ALT TEXT"/>
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <div class="content has-text-justified">
+    The left one is the quality of the point if the point is blue, then the quality is ok, otherwise it is red. The right-hand side picture
+    shows the point's altitude, and the middle one is the RGB point cloud</h2>
+    </div>
+  </div>
+</div>
+
+
+<!-- Start video carousel -->
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-3">Collected Raw Lidar Point Cloud Ground Truth</h2>
+            <div id="results-carousel" class="carousel results-carousel">
+                <div class="item">
+                    <h2 class="title is-3">Lower Campus</h2>
+                    <iframe src="https://www.youtube.com/embed/VZ09EGwnclA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 640px;"></iframe>
+                    <div class="columns is-centered has-text-centered">
+                      <div class="column is-four-fifths">
+                        <div class="content has-text-justified">
+                          Rotational video of Lidar Ground Truth of The Chinese University of Hong Kong, Lower Campus
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="item">
+                    <h2 class="title is-3">Upper Campus</h2>
+                    <iframe src="https://www.youtube.com/embed/AUegUqHEt68" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%;  height: 640px;" ></iframe>
+                    <div class="columns is-centered has-text-centered">
+                      <div class="column is-four-fifths">
+                        <div class="content has-text-justified">
+                          Rotational video of Lidar Ground Truth of The Chinese University of Hong Kong, Upper Campus
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="item">
+                    <h2 class="title is-3">SMBU Campus</h2>
+                    <iframe src="https://www.youtube.com/embed/9NMWPXc_pw8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%;  height: 640px;"></iframe>
+                    <div class="columns is-centered has-text-centered">
+                      <div class="column is-four-fifths">
+                        <div class="content has-text-justified">
+                          Rotational video of Lidar Ground Truth of The MSU-bit University
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End video carousel -->
+
+<!-- Start video carousel -->
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-3">Vanilla Gaussian Slatting Reconstruction Result</h2>
+            <div id="results-carousel" class="carousel results-carousel">
+                <div class="item">
+                    <h2 class="title is-3">SMBU Campus</h2>
+                    <iframe src="https://www.youtube.com/embed/D-Z2B4kss4s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 640px;"></iframe>
+                    <div class="columns is-centered has-text-centered">
+                      <div class="column is-four-fifths">
+                        <div class="content has-text-justified">
+                          Exploring the Gaussian Splatting Reconstruction of The Chinese University of Hong Kong, Lower Campus
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="item">
+                    <h2 class="title is-3">Upper Campus</h2>
+                    <iframe src="https://www.youtube.com/embed/aEMsL8fmsSA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%;  height: 640px;" ></iframe>
+                    <div class="columns is-centered has-text-centered">
+                      <div class="column is-four-fifths">
+                        <div class="content has-text-justified">
+                          Exploring the Gaussian Splatting Reconstruction of The Chinese University of Hong Kong, Upper Campus
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="item">
+                    <h2 class="title is-3">Lower Campus</h2>
+                    <iframe src="https://www.youtube.com/embed/q15tmpXNlxE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%;  height: 640px;"></iframe>
+                    <div class="columns is-centered has-text-centered">
+                      <div class="column is-four-fifths">
+                        <div class="content has-text-justified">
+                          Exploring the Gaussian Splatting Reconstruction of The MSU-bit University
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End video carousel -->
+
+<h2 class="subtitle has-text-centered">
+The reconstruction is done using one RTX3080 with one eighth scaling of the original RGB images collected using 2K resolution to ensure a complete training process.
+</h2>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @article{xiong2024gauu,
+          title={GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting},
+          author={Xiong, Butian and Li, Zhuo and Li, Zhen},
+          journal={arXiv preprint arXiv:2401.14032},
+          year={2024}
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
