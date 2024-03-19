@@ -174,7 +174,7 @@ table, th, td {
 
 .carousel {
   flex: 1;
-  height: 50vh; /* Adjust based on viewport height */
+  height: 65vh; /* Adjust based on viewport height */
 }
 
 
