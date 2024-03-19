@@ -188,6 +188,7 @@ table, th, td {
   position: relative;
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  margin: 10px; /* Add space around the iframe */
 }
 
 .iframe-container iframe {
@@ -198,3 +199,14 @@ table, th, td {
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  .carousels-container {
+    flex-direction: column;
+  }
+
+  .iframe-container {
+    width: 100%;
+    padding-top: 75%; /* You might want to adjust the aspect ratio for smaller screens */
+    margin: 10px 0; /* Adjust margin for vertical spacing on smaller screens */
+  }
+}
