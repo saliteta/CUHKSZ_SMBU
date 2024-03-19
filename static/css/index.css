@@ -142,7 +142,7 @@ body {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -160,4 +160,8 @@ th {
 
 table, th, td {
   border: 1px solid #ddd;
+}
+
+.img-three-quarters {
+  width: 75vw;
 }
