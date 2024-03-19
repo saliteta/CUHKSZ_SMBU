@@ -165,3 +165,20 @@ table, th, td {
 .img-three-quarters {
   width: 70vw;
 }
+
+.carousels-container {
+  display: flex;
+  justify-content: space-between; /* Adjust this as needed to align the carousels */
+  gap: 20px; /* Adds some space between the carousels */
+}
+
+.carousel {
+  flex: 1; /* Makes each carousel grow equally to fill the container */
+  /* You might want to add a max-width here to control the size */
+}
+
+/* Optional: Ensure the iframes inside the carousels take full width */
+.carousel iframe {
+  width: 100%;
+  height: auto; /* Adjust height as needed, or keep it fixed */
+}
