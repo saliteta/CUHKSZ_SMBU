@@ -179,34 +179,37 @@ table, th, td {
 
 
 /* Optional: Ensure the iframes inside the carousels take full width */
-.carousel iframe {
-  width: 100%;
-  height: auto; /* Adjust height as needed, or keep it fixed */
+.carousel {
+  position: relative; /* Ensure the carousel has a relative positioning */
+  height: 65vh; /* Adjust based on viewport height or as desired */
+  overflow: hidden; /* Hide overflow content */
 }
 
 .iframe-container {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  margin: 10px; /* Add space around the iframe */
+  height: 80%; /* Take up 80% of the carousel's height */
+  width: 100%; /* Use the full width to maintain the aspect ratio of the iframe */
+  position: absolute; /* Absolute positioning to place it correctly within the carousel */
+  top: 0; /* Align to the top */
 }
 
 .iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  height: 100%; /* Make the iframe take the full height of its container */
+  width: auto; /* Maintain the aspect ratio */
+}
+
+
+.carousel:after {
+  content: "";
+  display: block;
+  height: 20%;
 }
 
 @media (max-width: 768px) {
-  .carousels-container {
-    flex-direction: column;
+  .carousel {
+    height: auto; /* Adjust for smaller screens as needed */
   }
 
   .iframe-container {
-    width: 100%;
-    padding-top: 75%; /* You might want to adjust the aspect ratio for smaller screens */
-    margin: 10px 0; /* Adjust margin for vertical spacing on smaller screens */
+    padding-top: 0; /* Adjust if needed for aspect ratio on smaller screens */
   }
 }
