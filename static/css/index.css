@@ -172,11 +172,6 @@ table, th, td {
   gap: 20px; /* Adds some space between the carousels */
 }
 
-.carousel {
-  flex: 1;
-  height: 65vh; /* Adjust based on viewport height */
-}
-
 
 /* Optional: Ensure the iframes inside the carousels take full width */
 .carousel {
@@ -186,7 +181,7 @@ table, th, td {
 }
 
 .iframe-container {
-  height: 70%; /* Take up 80% of the carousel's height */
+  height: 80%; /* Take up 80% of the carousel's height */
   width: 100%; /* Use the full width to maintain the aspect ratio of the iframe */
   position: absolute; /* Absolute positioning to place it correctly within the carousel */
   top: 0; /* Align to the top */
