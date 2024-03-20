@@ -133,6 +133,13 @@ body {
   font-size: smaller;
 }
 
+.slider-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Adjust this as necessary */
+  overflow-x: auto; /* Allows for horizontal scrolling */
+  white-space: nowrap; /* Prevents wrapping of slider items */
+}
 
 
 .table-container {
