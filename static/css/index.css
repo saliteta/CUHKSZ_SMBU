@@ -122,7 +122,8 @@ body {
 }
 
 .results-carousel video {
-  margin: 0;
+  max-height: 80%; /* 80% of the .item height */
+  width: auto; /* Maintain aspect ratio */
 }
 
 .slider-pagination .slider-page {
