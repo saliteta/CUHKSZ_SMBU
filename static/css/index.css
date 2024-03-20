@@ -133,15 +133,6 @@ body {
   font-size: smaller;
 }
 
-.slider-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center; /* Adjust this as necessary */
-  overflow-x: auto; /* Allows for horizontal scrolling */
-  white-space: nowrap; /* Prevents wrapping of slider items */
-}
-
-
 .table-container {
   overflow-x: auto;
   margin: 20px 0;
@@ -173,8 +164,3 @@ table, th, td {
   width: 70vw;
 }
 
-
-.carousel .item video {
-  height: 80%; /* Adjust the height to 80% of its parent */
-  width: auto; /* This will maintain the aspect ratio of the video */
-}
