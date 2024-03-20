@@ -173,44 +173,8 @@ table, th, td {
   width: 70vw;
 }
 
-.carousels-container {
-  display: flex;
-  justify-content: space-between; /* Adjust this as needed to align the carousels */
-  gap: 20px; /* Adds some space between the carousels */
-}
 
-
-.carousel {
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack items vertically */
-  justify-content: flex-start; /* Align items to the top */
-  height: 65vh; /* Adjust based on viewport height or as desired */
-  overflow: hidden; /* Hide overflow content */
-}
-
-.iframe-container {
-  flex: 1 0 80%; /* Flex item takes up 80% of the container's height */
-  width: 100%; /* Use the full width */
-  /* Remove position: absolute; and top: 0; */
-}
-
-.carousel:after {
-  content: "";
-  flex: 1 0 20%; /* Invisible spacer takes up the remaining 20% */
-}
-
-.iframe-container iframe {
-  height: 100%; /* Make the iframe take the full height of its container */
-  width: auto; /* Maintain the aspect ratio */
-}
-
-
-@media (max-width: 768px) {
-  .carousel {
-    height: auto; /* Adjust for smaller screens as needed */
-  }
-
-  .iframe-container {
-    padding-top: 0; /* Adjust if needed for aspect ratio on smaller screens */
-  }
+.carousel .item video {
+  height: 80%; /* Adjust the height to 80% of its parent */
+  width: auto; /* This will maintain the aspect ratio of the video */
 }
