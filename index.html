@@ -228,16 +228,74 @@
   </div>
 </div>
 
-<img src="static/images/point_cloud.png" alt="MY ALT TEXT"/>
+<img src="static/images/Different_Reflectivity.png" alt="MY ALT TEXT"/>
 <div class="columns is-centered has-text-centered">
   <div class="column is-four-fifths">
     <div class="content has-text-justified">
-    The left one is the quality of the point if the point is blue, then the quality is ok, otherwise it is red. The right-hand side picture
-    shows the point's altitude, and the middle one is the RGB point cloud</h2>
+      Our dataset provides essential information for quality control and multi-modal analysis and visualization. By using
+      professional tools such as DJI Terra, one can observe three important properties critical for quality control: Reflectivity, Height,
+      and Return. Graph (a) in this figure illustrates reflectivity, which measures the amount of light reflected back to the LiDAR
+      sensor from surfaces or objects. Meanwhile, height, shown in graph (b), represents the building's altitude relative to the drone's
+      takeoff altitude. The return, presented in graph (c), indicates the number of light returns detected by the LiDAR. Since our
+      analysis filters out all data except those with at least two returns, moving objects, represented by red dots, will be excluded.
+      More visualization results can be explored in our dataset or in the supplementary materials.
     </div>
   </div>
 </div>
 
+<img src="static/images/comaprison.png" alt="MY ALT TEXT"/>
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+  </div>
+</div>
+
+<img src="static/images/method_comparision.png" alt="MY ALT TEXT"/>
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+  </div>
+</div>
+
+<img src="static/images/geometry.png" alt="MY ALT TEXT"/>
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+  </div>
+</div>
+
+<img src="static/images/Methods_Overview.png" alt="MY ALT TEXT"/>
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <div class="content has-text-justified">
+      1: The dataset prepared for input into the neural field
+      and Gaussian Splatting typically consists of camera positions
+      and images in COLMAP format. The Structure from Motion
+      (SfM) algorithm implemented in COLMAP initializes camera
+      positions randomly, which may not align with LiDAR data
+      in WGS 84 coordinates. This discrepancy poses a significant
+      challenge for geometric alignment measurement and multimodal fusion algorithms. When inputs are in two different
+      coordinate systems, further validation becomes impractical.
+      To address this, we propose a straightforward yet effective
+      method for statistical scale matching to align LiDAR point
+      clouds with camera positions. This approach is crucial for the
+      construction of our dataset.
+    </div>
+  </div>
+</div>
+
+<img src="static/images/Block Aquisition.png" alt="MY ALT TEXT"/>
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <div class="content has-text-justified">
+      This figure shows the design of the drone routing path. The white and orange dots represent the positions where the
+      drone took pictures. The overall path for a scene is shown in Graph (a), which is composed of several micro-blocks. One such
+      micro-block, highlighted in orange, is detailed in Graph (a). Zooming into this orange micro-block reveals Figure (b). The total
+      path length of each micro-block is limited by the battery life of the DJI Matrice 300, as well as the power consumption of the
+      LiDAR in windy conditions. For safety reasons, each micro-block typically covers an area of 350 x 350 square meters. Each
+      micro-block has five routing paths, providing different angles for photography, as illustrated in Figure (c). The first routing
+      path offers a Bird's Eye View (BEV), while the subsequent four paths alter the camera's orientation by 45 degrees towards the
+      horizontal plane. These four paths' camera orientations are forward, backward, rightward, and leftward, respectively.
+    </div>
+  </div>
+</div>
 
 
 
@@ -367,136 +425,7 @@
 </div>
 </div>
 
-<div class="container">
-  <div class="table-container">
-  <h2 class="title is-3">Quantitative Table for Vanilla 3DGS On 6 Scenes Evaluated on Training Dataset</h2>
-  <table>
-    <tr>
-      <th>Method</th>
-      <th>Scene | Metrics</th>
-      <th>PSNR</th>
-      <th>SSIM</th>
-      <th>LPIPS</th>
-      <th>Time(CPU-min)</th>
-      <th>PSNR</th>
-      <th>SSIM</th>
-      <th>LPIPS</th>
-      <th>Time(CPU-min)</th>
-      <th>PSNR</th>
-      <th>SSIM</th>
-      <th>LPIPS</th>
-      <th>Time(GPU-min)</th>
-    </tr>
-    <tr>
-      <td rowspan="7">Gaussian Splatting</td>
-      <td>Lower Campus</td>
-      <td>24.76</td>
-      <td>0.735</td>
-      <td>0.343</td>
-      <td>58</td>
-      <td>20.76</td>
-      <td>0.516</td>
-      <td>0.817</td>
-      <td>320</td>
-      <td>17.70</td>
-      <td>0.455</td>
-      <td>0.779</td>
-      <td>1692</td>
-    </tr>
-    <tr>
-      <td>Upper Campus</td>
-      <td>25.49</td>
-      <td>0.762</td>
-      <td>0.373</td>
-      <td>64</td>
-      <td>20.25</td>
-      <td>0.512</td>
-      <td>0.816</td>
-      <td>292</td>
-      <td>18.76</td>
-      <td>0.448</td>
-      <td>0.734</td>
-      <td>1694</td>
-    </tr>
-    <tr>
-      <td>HAV</td>
-      <td>26.14</td>
-      <td>0.805</td>
-      <td>0.237</td>
-      <td>62</td>
-      <td>20.79</td>
-      <td>0.511</td>
-      <td>0.792</td>
-      <td>368</td>
-      <td>16.95</td>
-      <td>0.399</td>
-      <td>0.727</td>
-      <td>1788</td>
-    </tr>
-    <tr>
-      <td>LFLS</td>
-      <td>22.03</td>
-      <td>0.678</td>
-      <td>0.371</td>
-      <td>71</td>
-      <td>18.64</td>
-      <td>0.453</td>
-      <td>0.856</td>
-      <td>348</td>
-      <td>15.05</td>
-      <td>0.364</td>
-      <td>0.879</td>
-      <td>1780</td>
-    </tr>
-    <tr>
-      <td>SMBU</td>
-      <td>23.90</td>
-      <td>0.784</td>
-      <td>0.248</td>
-      <td>63</td>
-      <td>18.37</td>
-      <td>0.510</td>
-      <td>0.810</td>
-      <td>252</td>
-      <td>16.61</td>
-      <td>0.405</td>
-      <td>0.682</td>
-      <td>1716</td>
-    </tr>
-    <tr>
-      <td>SZVIT</td>
-      <td>24.21</td>
-      <td>0.749</td>
-      <td>0.326</td>
-      <td>64</td>
-      <td>19.64</td>
-      <td>0.551</td>
-      <td>0.820</td>
-      <td>276</td>
-      <td>17.28</td>
-      <td>0.462</td>
-      <td>0.781</td>
-      <td>1732</td>
-    </tr>
-    <tr>
-      <td>Avg</td>
-      <td>24.12</td>
-      <td>0.752</td>
-      <td>0.300</td>
-      <td>63.7</td>
-      <td>19.74</td>
-      <td>0.510</td>
-      <td>0.815</td>
-      <td>292.7</td>
-      <td>17.04</td>
-      <td>0.422</td>
-      <td>0.764</td>
-      <td>1733.5</td>
-    </tr>
-  </table>
-  
-  </div>
-</div>
+
 
 <div class="container">
   <div class="title is-3">Download Dataset</div>
@@ -535,6 +464,8 @@
     </div>
   </div>
 </footer>
+
+
 
 <!-- Statcounter tracking code -->
   
