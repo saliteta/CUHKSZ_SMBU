@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" 
-  content="GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting">
-  <meta property="og:title" content="GauU-Scene: A Large Scene Reconstruction Benchmark Using Highly Accurate Point Cloud"/>
+  <meta name="description"
+    content="GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting">
+  <meta property="og:title"
+    content="GauU-Scene: A Large Scene Reconstruction Benchmark Using Highly Accurate Point Cloud" />
   <meta property="og:description" content="  Our dataset is now publicly available via the link provided above. 
   Our enlarged dataset is divided into six main parts. The first 
   part is the top portion of this graph, referred to as SZIIT (The 
@@ -21,35 +23,33 @@
     Youtube video provided. We store the dataset in Ply format on the 
     OneDrive share point link, with coordinates in WGS 84/ UTM zone 50N: 
     EPSG:32650 geographic standard. To further facilitate usage in computer 
-    vision and graphics, we will also provide COLMAP datasets and aligned point clouds."/>
-  <meta property="og:url" content="https://saliteta.github.io/CUHKSZ_SMBU/"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static\images\GauU_V2_Dataset_Overview.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-  
-  
-  <meta name="twitter:title" content="GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting">
-  <meta name="twitter:description" content="GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting">
+    vision and graphics, we will also provide COLMAP datasets and aligned point clouds." />
+  <meta property="og:url" content="https://saliteta.github.io/CUHKSZ_SMBU/" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static\images\GauU_V2_Dataset_Overview.png">
+
+
+
+  <meta name="twitter:title"
+    content="GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting">
+  <meta name="twitter:description"
+    content="GauU-Scene: A Scene Reconstruction Benchmark on Large Scale 3D Reconstruction Dataset Using Gaussian Splatting">
+
   <meta name="twitter:card" content="">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="Gaussian Splatting, Butian, Large Scale, Dataset, Xiong, GauU-Scene, GauU-Scene V2, 3D Reconstruction,">
+  <meta name="keywords"
+    content="Gaussian Splatting, Butian, Large Scale, Dataset, Xiong, GauU-Scene, GauU-Scene V2, 3D Reconstruction,">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
   <title>GauU-Scene</title>
   <link rel="icon" type="image/x-icon" href="static\images\webpage_raw.png">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -66,412 +66,949 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
+
 <body>
 
-<style>
+  <style>
     img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 90%; /* Adjust this value as needed */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      /* Adjust this value as needed */
+
     }
+
+
 
     h2.subtitle.has-text-centered {
-        margin-left: 30%; /* Adjust the margin as needed */
-        margin-right: 30%; /* Adjust the margin as needed */
-        text-align: center;
+      margin-left: 20%;
+      /* Adjust the margin as needed */
+      margin-right: 20%;
+      /* Adjust the margin as needed */
+      text-align: center;
     }
-</style>
+  </style>
 
 
-  
   <section class="hero">
     <div class="hero-body">
-      <div class="container is-max-desktop">
+      <div class="container is-fullhd">
+        <img src="static/images/CUSZ-03logo-whier.png" style="align: left;width:192px;height:160px;position:absolute;margin-left: 100px"/>
         <div class="columns is-centered">
           <div class="column has-text-centered">
+            
             <h1 class="title is-1 publication-title">GauUscene</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="dwadsdawda" target="_blank">Anonymous Authors</a><sup>*</sup>,</span>
+                <a href="https://saliteta.github.io/">Butian Xiong</a>, Nanjun Zheng, <a
+                  href="https://mypage.cuhk.edu.cn/academics/lizhen/">Zhen Li</a>,</span>
 
-                  <div class="is-size-5 publication-authors">
-                    <!--The Chinese University of Hong Kong, Shenzhen-->
-                    <span class="author-block">Anonymous Institution<br>IJCAI 2024</span>
-                  </div>
+              <div class="is-size-5 publication-authors">
+                <!--The Chinese University of Hong Kong, Shenzhen-->
+                <span class="author-block">The Chinese University of Hong Kong, Shenzhen<br>IJCAI 2024</span>
+              </div>
 
 
-                    <!-- Supplementary PDF link -->
-                  <span class="link-block">
-                      <a href="static/pdfs/data_collection_protocal.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
+              <!-- Supplementary PDF link -->
+              <span class="link-block">
+                <a href="static/pdfs/data_collection_protocal.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
                   </span>
+                  <span>Supplementary</span>
+                </a>
+              </span>
 
-                  <!--Dataset link -->
-                  <span class="link-block">
-                    <a href="static/pdfs/GauUscene_license.pdf" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="far fa-images"></i>
-                    </span>
-                    <span>Dataset</span>
-                  </a>
+              <!--Dataset link -->
+              <span class="link-block">
+                <a href="static/pdfs/GauUscene_license.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="far fa-images"></i>
                   </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2401.14032" target="_blank"
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2401.14032" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>GauU-Scene V1</span>
                 </a>
-                </span>
+              </span>
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2404.04880" target="_blank"
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2404.04880" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>GauU-Scene V2</span>
                 </a>
-                </span>
+              </span>
 
-                 <!-- Code Link -->
+              <!-- Code Link -->
               <span class="link-block">
                 <a href="https://github.com/saliteta/lidar_SfM_alignment" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
-                </span>
-                <span>Code</span>
-              </a>
-            </span>
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <!-- Website Code Link -->
+              <span class="link-block">
+                <a href="https://github.com/saliteta/CUHKSZ_SMBU?tab=readme-ov-file" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Website Repo</span>
+                </a>
+              </span>
 
             </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
+  </section>
+
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-fullhd">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We introduce a novel large-scale scene reconstruction benchmark
+              using the newly developed 3D representation approach, Gaussian
+              Splatting, on our expansive U-Scene dataset. U-Scene encompasses
+              over one and a half square kilometers in the first version and
+              3.5 square kilometers in the second version, featuring a comprehensive
+              RGB dataset coupled with LiDAR ground truth. The dataset
+              size is continually growing and now includes 6 scenarios.
+              For data acquisition, we employed the Matrix 300 drone
+              equipped with the high-accuracy Zenmuse L1 LiDAR, enabling
+              precise rooftop data collection. The detailed data acquisition
+              protocol is appended in the supplementary material.
+              It contains drone assembly, controller path planning,
+              controller assembly, safety and protection, RTK Help,
+              Drone Data Post-Processing, and many other details.
+              U-Scene, developed under the auspices of the Chinese University of Hong Kong,
+              Shenzhen MSU-BIT University, SZIIT, and auxiliary residential area, offers a
+              unique blend of urban and academic environments for advanced spatial analysis.
+              Our evaluation of U-Scene with Gaussian Splatting includes a detailed
+              analysis across various novel viewpoints. We also juxtapose these
+              results with those derived from our accurate point cloud dataset,
+              highlighting significant differences that underscore the importance and innovation of our work.
+            </p>
+            <div class="column is-four-fifths">
+            </div>
+          </div>
+        </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <div class="container is-fullhd">
+    <img src="static/images/data_preview.png" alt="Data Preview" />
   </div>
-</section>
-
-
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
+  <div class="container is-fullhd">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title">Dataset Introduction</h2>
         <div class="content has-text-justified">
-          <p>
-            We introduce a novel large-scale scene reconstruction benchmark
-             using the newly developed 3D representation approach, Gaussian
-              Splatting, on our expansive U-Scene dataset. U-Scene encompasses
-               over one and a half square kilometers in the first version and
-                3.5 square kilometers in the second version, featuring a comprehensive
-                 RGB dataset coupled with LiDAR ground truth. The dataset 
-                 size is continually growing and now includes 6 scenarios. 
-                 For data acquisition, we employed the Matrix 300 drone 
-                 equipped with the high-accuracy Zenmuse L1 LiDAR, enabling 
-                 precise rooftop data collection. The detailed data acquisition
-                  protocol is appended in the supplementary material. 
-                  It contains drone assembly, controller path planning, 
-                  controller assembly, safety and protection, RTK Help, 
-                  Drone Data Post-Processing, and many other details. 
-                  U-Scene, developed under the auspices of the Chinese University of Hong Kong, 
-                  Shenzhen MSU-BIT University, SZIIT, and auxiliary residential area, offers a 
-                  unique blend of urban and academic environments for advanced spatial analysis. 
-                  Our evaluation of U-Scene with Gaussian Splatting includes a detailed 
-                  analysis across various novel viewpoints. We also juxtapose these 
-                  results with those derived from our accurate point cloud dataset, 
-                  highlighting significant differences that underscore the importance and innovation of our work.
-          </p>
-          <div class="column is-four-fifths">
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<img src="static/images/dataset_preview.png" alt="MY ALT TEXT"  style="height: 600px;"/>
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <div class="content has-text-justified">
-  Our dataset is now publicly available via the link provided above. 
-  Our enlarged dataset is divided into six main parts. The first 
-  part is the top portion of this graph, referred to as SZIIT (The 
-  Shenzhen Institute of Information Technology). The second row is 
-  called the Lower Campus, an abbreviation for the Chinese University
-   of Hong Kong, Lower Campus. The third row displays the Upper Campus
-    of CUHKSZ, and the SMBU (Shenzhen MSU-BIT University) Campus. As 
-    for the last row, it contains two auxiliary residential areas 
-    named He Ao Village and LFLS(Longgang Foreign language school) We utilized highly accurate LiDAR 
-    to collect the dataset, covering a range of more than 1.5 km^2. To 
-    view the dataset from different angles, one can use the embedded 
-    Youtube video provided. We store the dataset in Ply format on the 
-    OneDrive share point link, with coordinates in WGS 84/ UTM zone 50N: 
-    EPSG:32650 geographic standard. To further facilitate usage in computer 
-    vision and graphics, we will also provide COLMAP datasets and aligned point clouds.
-    </div>
-  </div>
-</div>
-
-<img src="static/images/Different_Reflectivity.png" alt="MY ALT TEXT"/>
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <div class="content has-text-justified">
-      Our dataset provides essential information for quality control and multi-modal analysis and visualization. By using
-      professional tools such as DJI Terra, one can observe three important properties critical for quality control: Reflectivity, Height,
-      and Return. Graph (a) in this figure illustrates reflectivity, which measures the amount of light reflected back to the LiDAR
-      sensor from surfaces or objects. Meanwhile, height, shown in graph (b), represents the building's altitude relative to the drone's
-      takeoff altitude. The return, presented in graph (c), indicates the number of light returns detected by the LiDAR. Since our
-      analysis filters out all data except those with at least two returns, moving objects, represented by red dots, will be excluded.
-      More visualization results can be explored in our dataset or in the supplementary materials.
-    </div>
-  </div>
-</div>
-
-<img src="static/images/comaprison.png" alt="MY ALT TEXT"/>
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-  </div>
-</div>
-
-<img src="static/images/method_comparision.png" alt="MY ALT TEXT"/>
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-  </div>
-</div>
-
-<img src="static/images/geometry.png" alt="MY ALT TEXT"/>
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-  </div>
-</div>
-
-<img src="static/images/Methods_Overview.png" alt="MY ALT TEXT"/>
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <div class="content has-text-justified">
-      1: The dataset prepared for input into the neural field
-      and Gaussian Splatting typically consists of camera positions
-      and images in COLMAP format. The Structure from Motion
-      (SfM) algorithm implemented in COLMAP initializes camera
-      positions randomly, which may not align with LiDAR data
-      in WGS 84 coordinates. This discrepancy poses a significant
-      challenge for geometric alignment measurement and multimodal fusion algorithms. When inputs are in two different
-      coordinate systems, further validation becomes impractical.
-      To address this, we propose a straightforward yet effective
-      method for statistical scale matching to align LiDAR point
-      clouds with camera positions. This approach is crucial for the
-      construction of our dataset.
-    </div>
-  </div>
-</div>
-
-<img src="static/images/Block Aquisition.png" alt="MY ALT TEXT"/>
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <div class="content has-text-justified">
-      This figure shows the design of the drone routing path. The white and orange dots represent the positions where the
-      drone took pictures. The overall path for a scene is shown in Graph (a), which is composed of several micro-blocks. One such
-      micro-block, highlighted in orange, is detailed in Graph (a). Zooming into this orange micro-block reveals Figure (b). The total
-      path length of each micro-block is limited by the battery life of the DJI Matrice 300, as well as the power consumption of the
-      LiDAR in windy conditions. For safety reasons, each micro-block typically covers an area of 350 x 350 square meters. Each
-      micro-block has five routing paths, providing different angles for photography, as illustrated in Figure (c). The first routing
-      path offers a Bird's Eye View (BEV), while the subsequent four paths alter the camera's orientation by 45 degrees towards the
-      horizontal plane. These four paths' camera orientations are forward, backward, rightward, and leftward, respectively.
-    </div>
-  </div>
-</div>
-
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Point Cloud Data Preview</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/video/hav.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/video/lfls.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/video/lower_campus.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video4">
-          <video poster="" id="video4" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/video/smbu.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video5">
-          <video poster="" id="video5" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/video/sziit.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video6">
-          <video poster="" id="video6" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/video/upper_campus.mp4"
-            type="video/mp4">
-          </video>
+          Our dataset is now publicly available via the link provided above.
+          Our enlarged dataset is divided into six main parts. The first
+          part is the top portion of this graph, referred to as SZIIT (The
+          Shenzhen Institute of Information Technology). The second row is
+          called the Lower Campus, an abbreviation for the Chinese University
+          of Hong Kong, Lower Campus. The third row displays the Upper Campus
+          of CUHKSZ, and the SMBU (Shenzhen MSU-BIT University) Campus. As
+          for the last row, it contains two auxiliary residential areas
+          named He Ao Village and LFLS(Longgang Foreign language school) We utilized highly accurate LiDAR
+          to collect the dataset, covering a range of more than 1.5 km^2. To
+          view the dataset from different angles, one can use the embedded
+          Youtube video provided. We store the dataset in Ply format on the
+          OneDrive share point link, with coordinates in WGS 84/ UTM zone 50N:
+          EPSG:32650 geographic standard. To further facilitate usage in computer
+          vision and graphics, we will also provide COLMAP datasets and aligned point clouds.
         </div>
       </div>
     </div>
   </div>
-</section>
-<!-- End video carousel -->
 
-
-
-<div class="container">
-<div class="table-container">
-  <div class="content has-text-justified">
-    <h2 class="title is-3">Point Cloud Data Quantitative Scale</h2>
+  <div class="container is-fullhd">
+    <img src="static/images/different_level.png" alt="Different Reflectivity" />
   </div>
-    <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th>Size in km<sup>2</sup></th>
-        <th>Image Number</th>
-        <th>Points Number</th>
-        <th>DJI Raw Data Size in GB</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Lower Campus</td>
-        <td>1.020267099</td>
-        <td>670</td>
-        <td>79,767,884</td>
-        <td>12.5</td>
-      </tr>
-      <tr>
-        <td>Upper Campus</td>
-        <td>0.923096497</td>
-        <td>715</td>
-        <td>94,218,901</td>
-        <td>13.5</td>
-      </tr>
-      <tr>
-        <td>SMBU</td>
-        <td>0.908184476</td>
-        <td>563</td>
-        <td>283,31,405</td>
-        <td>16.2</td>
-      </tr>
-      <tr>
-        <td>SZIIT</td>
-        <td>1.557606058</td>
-        <td>1215</td>
-        <td>58,979,628</td>
-        <td>22.3</td>
-      </tr>
-      <tr>
-        <td>HAV</td>
-        <td>0.815080080</td>
-        <td>424</td>
-        <td>26,759,799</td>
-        <td>7.8</td>
-      </tr>
-      <tr>
-        <td>LFLS</td>
-        <td>1.466664729</td>
-        <td>1106</td>
-        <td>98,547,710</td>
-        <td>19.8</td>
-      </tr>
-      <tr>
-        <td>Total</td>
-        <td>6.668</td>
-        <td>4693</td>
-        <td>627,500,327</td>
-        <td>92.1</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</div>
+
+  <div class="container is-fullhd">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title">Dataset Information</h2>
+        <div class="content has-text-justified">
+          Our dataset provides essential information for quality control and multi-modal analysis and visualization. By
+          using
+          professional tools such as DJI Terra, one can observe three important properties critical for quality control:
+          Reflectivity, Height,
+          and Return. Graph (a) in this figure illustrates reflectivity, which measures the amount of light reflected
+          back to the LiDAR
+          sensor from surfaces or objects. Meanwhile, height, shown in graph (b), represents the building's altitude
+          relative to the drone's
+          takeoff altitude. The return, presented in graph (c), indicates the number of light returns detected by the
+          LiDAR. Since our
+          analysis filters out all data except those with at least two returns, moving objects, represented by red dots,
+          will be excluded.
+          More visualization results can be explored in our dataset or in the supplementary materials.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-fullhd">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p><b>Table 1. This table provides detailed comparisons between our dataset and previously collected datasets.
+              "Ptgy" stands for Photogrammetry, which is a non-LiDAR-based data acquisition method. Only real scenes are
+              included in this table.</b></p>
+          <table>
+            <thead>
+              <tr>
+                <th> <b>Dataset</b> </th>
+                <th> <b>Acquisition</b> </th>
+                <th> <b>Data Type</b> </th>
+                <th> <b>Area/Length</b> </th>
+                <th> <b>Image Number</b> </th>
+                <th> <b>Points/Triangular</b> </th>
+                <th> <b>scene</b></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  KITTI </td>
+                <td> Car Camera/Lidar </td>
+                <td> PC/Image </td>
+                <td> 39.20km </td>
+                <td> 300K </td>
+                <td> 4549M </td>
+                <td> 1 </td>
+              </tr>
+              <tr>
+                <td>
+                  BlockNeRF </td>
+                <td> Car Camera </td>
+                <td> Image </td>
+                <td> - </td>
+                <td> 12k </td>
+                <td> - </td>
+                <td> 1</td>
+              </tr>
+              <tr>
+                <td>
+                  MILL 19 </td>
+                <td> UAV Camera </td>
+                <td> Image </td>
+                <td> - </td>
+                <td> 3.6k </td>
+                <td> - </td>
+                <td> 2</td>
+              </tr>
+              <tr>
+                <td>
+                  UrbanBIS </td>
+                <td> UAV Ptgy </td>
+                <td> PC/Mesh/Image </td>
+                <td> 10.78km² </td>
+                <td> 113.3k </td>
+                <td> 2523.8M/284.3M </td>
+                <td> 5</td>
+              </tr>
+              <tr>
+                <td>
+                  DublinCity </td>
+                <td> UAV Lidar </td>
+                <td> PC/Image </td>
+                <td> 2.00km² </td>
+                <td> - </td>
+                <td> 260M </td>
+                <td> 1</td>
+              </tr>
+              <tr>
+                <td>
+
+                  Hessigheim </td>
+                <td> UAV Camera/Lidar </td>
+                <td> PC/Mesh </td>
+                <td> 0.19km² </td>
+                <td> - </td>
+                <td> 125.7M/36.76M </td>
+                <td> 1 </td>
+              </tr>
+              <tr>
+                <td>
+                  UrbanScene3D </td>
+                <td> UAV Camera/Lidar </td>
+                <td> PC/Image </td>
+                <td> 3.03km² </td>
+                <td> <b>31k</b> </td>
+                <td> 120M </td>
+                <td> 6</td>
+              </tr>
+              <tr>
+                <td>
+
+                  <b>GauU</b>(Ours)
+                </td>
+                <td> UAV Camera/Lidar </td>
+                <td> PC/Image </td>
+                <td> <b>6.67km²</b> </td>
+                <td> 4.6k </td>
+                <td> <b>627.5M</b> </td>
+                <td> 6</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><b>Table 2. This table presents detailed coverage of scene reconstruction. We ensure that the size of each
+              scene is maintained at approximately 1 km². This constraint limits the variation in lighting effects
+              caused by the sun. The density of our point cloud is 20 cm per point. The raw data consists solely of DJI
+              raw data and does not include the post-processed point cloud from the DJI Terra. The "Avg Height" denotes
+              the average height of the drone's flight path relative to the altitude from which the drone took off. This
+              height is consistently higher than that of the tallest local building. It is important to note that the
+              maximum effective distance for LIDAR detection should be less than 250 m.</b></p>
+          <table>
+            <thead>
+              <tr>
+                <th> <b>Scene</b> </th>
+                <th> <b>Area in km²</b> </th>
+                <th> <b>Image Number</b> </th>
+                <th> <b>Points Number</b> </th>
+                <th> <b>Raw Data in GB</b> </th>
+                <th> <b>Avg Height in m</b> </th>
+                <th> <b>Resolution</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Lower Campus </td>
+                <td> 1.020 </td>
+                <td> 670 </td>
+                <td> 79,767,884 </td>
+                <td> 12.5 </td>
+                <td> 120 </td>
+                <td> 5472 × 3648</td>
+              </tr>
+              <tr>
+                <td>
+                  Upper Campus </td>
+                <td> 0.923 </td>
+                <td> 715 </td>
+                <td> 94,218,901 </td>
+                <td> 13.5 </td>
+                <td> 120 </td>
+                <td> 5472 × 3648</td>
+              </tr>
+              <tr>
+                <td>
+                  HAV </td>
+                <td> 0.815 </td>
+                <td> 424 </td>
+                <td> 26,759,799 </td>
+                <td> 7.8 </td>
+                <td> 120 </td>
+                <td> 5472 × 3648</td>
+              </tr>
+              <tr>
+                <td>
+                  LFLS </td>
+                <td> 1.467 </td>
+                <td> 1106 </td>
+                <td> 98,547,710 </td>
+                <td> 19.8 </td>
+                <td> 150 </td>
+                <td> 5472 × 3648</td>
+              </tr>
+              <tr>
+                <td>
+                  SMBU </td>
+                <td> 0.908 </td>
+                <td> 563 </td>
+                <td> 283,31,405 </td>
+                <td> 16.2 </td>
+                <td> 150 </td>
+                <td> 5472 × 3648</td>
+              </tr>
+              <tr>
+                <td>
+                  SZIIT </td>
+                <td> 1.557 </td>
+                <td> 1215 </td>
+                <td> 58,979,628 </td>
+                <td> 22.3 </td>
+                <td> 136 </td>
+                <td> 5472 × 3648</td>
+              </tr>
+              <tr>
+                <td> <b>Total</b> </td>
+                <td> 6.668 </td>
+                <td> 4693 </td>
+                <td> 627,500,327 </td>
+                <td> 92.1 </td>
+                <td> Nan </td>
+                <td> Nan</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><b>Table 3. This table displays the results obtained when testing our dataset with different methods,
+              including two NeRF-based methods and 3DGS (3D Gaussian Splatting). We measured the training time in terms
+              of GPU count multiplied by training time in minutes. For training and evaluating the Gaussian Splatting
+              results, we used the official implementation of Gaussian Splatting. Meanwhile, the NeRF Studio
+              implementation was utilized for Instant-NGP and NeRFacto to conduct training and evaluation.</b></p>
+          <table>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th colspan="4">Gaussian Splatting</th>
+                <th colspan="4">Instant NGP</th>
+                <th colspan="4">NeRFacto</th>
+              </tr>
+              <tr>
+                <th>Scene</th>
+                <th>PSNR ↑</th>
+                <th>SSIM ↓</th>
+                <th>LPIPS ↓</th>
+                <th>Time (GPU·min)</th>
+                <th>PSNR ↑</th>
+                <th>SSIM ↑</th>
+                <th>LPIPS ↓</th>
+                <th>Time (GPU·min)</th>
+                <th>PSNR ↑</th>
+                <th>SSIM ↑</th>
+                <th>LPIPS ↓</th>
+                <th>Time (GPU·min)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lower Campus</td>
+                <td>24.76</td>
+                <td>0.735</td>
+                <td>0.343</td>
+                <td>58</td>
+                <td>20.76</td>
+                <td>0.516</td>
+                <td>0.817</td>
+                <td>220</td>
+                <td>17.70</td>
+                <td>0.455</td>
+                <td>0.779</td>
+                <td>1692</td>
+              </tr>
+              <tr>
+                <td>Upper Campus</td>
+                <td>25.49</td>
+                <td>0.762</td>
+                <td>0.273</td>
+                <td>64</td>
+                <td>20.25</td>
+                <td>0.522</td>
+                <td>0.816</td>
+                <td>392</td>
+                <td>18.66</td>
+                <td>0.448</td>
+                <td>0.734</td>
+                <td>1704</td>
+              </tr>
+              <tr>
+                <td>HAV</td>
+                <td>26.14</td>
+                <td>0.805</td>
+                <td>0.237</td>
+                <td>62</td>
+                <td>20.79</td>
+                <td>0.511</td>
+                <td>0.792</td>
+                <td>268</td>
+                <td>16.95</td>
+                <td>0.399</td>
+                <td>0.727</td>
+                <td>1788</td>
+              </tr>
+              <tr>
+                <td>LFLS</td>
+                <td>22.03</td>
+                <td>0.678</td>
+                <td>0.371</td>
+                <td>71</td>
+                <td>18.64</td>
+                <td>0.453</td>
+                <td>0.856</td>
+                <td>348</td>
+                <td>15.05</td>
+                <td>0.364</td>
+                <td>0.879</td>
+                <td>1780</td>
+              </tr>
+              <tr>
+                <td>SMBU</td>
+                <td>23.90</td>
+                <td>0.784</td>
+                <td>0.248</td>
+                <td>63</td>
+                <td>18.37</td>
+                <td>0.507</td>
+                <td>0.810</td>
+                <td>252</td>
+                <td>16.61</td>
+                <td>0.405</td>
+                <td>0.682</td>
+                <td>1716</td>
+              </tr>
+              <tr>
+                <td>SZIIT</td>
+                <td>24.21</td>
+                <td>0.749</td>
+                <td>0.326</td>
+                <td>64</td>
+                <td>19.64</td>
+                <td>0.551</td>
+                <td>0.820</td>
+                <td>276</td>
+                <td>17.28</td>
+                <td>0.462</td>
+                <td>0.781</td>
+                <td>1732</td>
+              </tr>
+              <tr>
+                <td>Avg</td>
+                <td><strong>24.42</strong></td>
+                <td><strong>0.752</strong></td>
+                <td><strong>0.300</strong></td>
+                <td><strong>63.7</strong></td>
+                <td>19.74</td>
+                <td>0.510</td>
+                <td>0.815</td>
+                <td>292.7</td>
+                <td>17.04</td>
+                <td>0.422</td>
+                <td>0.764</td>
+                <td>1735.3</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><b>Table 4. Chamful Distance Between Downsampled Lidar and Reconstructed Point Cloud</b></p>
+          <table>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th colspan="2">3DGS</th>
+                <th colspan="2">Instant NGP</th>
+                <th colspan="2">NeRFacto</th>
+              </tr>
+              <tr>
+                <th>Scene</th>
+                <th>Mean &#8595;</th>
+                <th>STD &#8595;</th>
+                <th>Mean &#8595;</th>
+                <th>STD &#8595;</th>
+                <th>Mean &#8595;</th>
+                <th>STD &#8595;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lower Campus</td>
+                <td>0.079</td>
+                <td>0.207</td>
+                <td>0.123</td>
+                <td>0.378</td>
+                <td>0.067</td>
+                <td>0.198</td>
+              </tr>
+              <tr>
+                <td>Upper Campus</td>
+                <td>0.096</td>
+                <td>0.312</td>
+                <td>0.082</td>
+                <td>0.260</td>
+                <td>0.050</td>
+                <td>0.170</td>
+              </tr>
+              <tr>
+                <td>HAV</td>
+                <td>0.124</td>
+                <td>0.305</td>
+                <td>0.177</td>
+                <td>0.497</td>
+                <td>0.065</td>
+                <td>0.205</td>
+              </tr>
+              <tr>
+                <td>LFLS</td>
+                <td>0.248</td>
+                <td>0.192</td>
+                <td>0.228</td>
+                <td>0.314</td>
+                <td>0.277</td>
+                <td>0.245</td>
+              </tr>
+              <tr>
+                <td>SMBU</td>
+                <td>0.186</td>
+                <td>0.440</td>
+                <td>0.153</td>
+                <td>0.458</td>
+                <td>0.066</td>
+                <td>0.240</td>
+              </tr>
+              <tr>
+                <td>SZIIT</td>
+                <td>0.064</td>
+                <td>0.168</td>
+                <td>0.136</td>
+                <td>0.438</td>
+                <td>0.034</td>
+                <td>0.110</td>
+              </tr>
+              <tr>
+                <td>Avg</td>
+                <td>0.133</td>
+                <td>0.271</td>
+                <td>0.149</td>
+                <td>0.391</td>
+                <td><strong>0.093</strong></td>
+                <td><strong>0.194</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!--
+    <img src="static/images/comaprison.png" alt="Comparison" />
+
+    <hr />
+    <img src="static/images/method_comparision.png" alt="MY ALT TEXT" />
+
+    <hr />
+    <img src="static/images/geometry.png" alt="MY ALT TEXT" />
+    -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-fullhd">
+
+    <hr />
+    <img src="static/images/Methods_Overview.png" alt="MY ALT TEXT" />
+  </div>
+  <div class="container is-fullhd">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title">Data Collection Protocol</h2>
+        <div class="content has-text-justified">
+          The dataset prepared for input into the neural field
+          and Gaussian Splatting typically consists of camera positions
+          and images in COLMAP format. The Structure from Motion
+          (SfM) algorithm implemented in COLMAP initializes camera
+          positions randomly, which may not align with LiDAR data
+          in WGS 84 coordinates. This discrepancy poses a significant
+          challenge for geometric alignment measurement and multimodal fusion algorithms. When inputs are in two
+          different
+          coordinate systems, further validation becomes impractical.
+          To address this, we propose a straightforward yet effective
+          method for statistical scale matching to align LiDAR point
+          clouds with camera positions. This approach is crucial for the
+          construction of our dataset.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-fullhd">
+    <img src="static/images/Block Aquisition.png" alt="MY ALT TEXT" />
+  </div>
+  <div class="container is-fullhd">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          This figure shows the design of the drone routing path. The white and orange dots represent the positions
+          where the
+          drone took pictures. The overall path for a scene is shown in Graph (a), which is composed of several
+          micro-blocks. One such
+          micro-block, highlighted in orange, is detailed in Graph (a). Zooming into this orange micro-block reveals
+          Figure (b). The total
+          path length of each micro-block is limited by the battery life of the DJI Matrice 300, as well as the power
+          consumption of the
+          LiDAR in windy conditions. For safety reasons, each micro-block typically covers an area of 350 x 350 square
+          meters. Each
+          micro-block has five routing paths, providing different angles for photography, as illustrated in Figure (c).
+          The first routing
+          path offers a Bird's Eye View (BEV), while the subsequent four paths alter the camera's orientation by 45
+          degrees towards the
+          horizontal plane. These four paths' camera orientations are forward, backward, rightward, and leftward,
+          respectively.
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-<div class="container">
-  <div class="title is-3">Download Dataset</div>
-  <p>
-    If you are interested in the data, please first obtained the license at the dataset link provided above
-    and send email to the correspondance according to the guidance written in the license. 
-  </p>
-</div>
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-fullhd has-text-justified">
+        <div class="columns is-centered">
+          <h2 class="title">Point Cloud Data Preview</h2>
+        </div>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/video/hav.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/video/lfls.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/video/lower_campus.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/video/smbu.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/video/sziit.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video6">
+            <video poster="" id="video6" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="static/video/upper_campus.mp4" type="video/mp4">
+            </video>
+          </div>
 
-<!--BibTex citation -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+  <section class="section">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <h2 class="title">Point Cloud Data Quantitative Scale</h2>
+      </div>
+      <div class="table-container">
+        <div class="content">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Size in km<sup>2</sup></th>
+                <th>Image Number</th>
+                <th>Points Number</th>
+                <th>DJI Raw Data Size in GB</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lower Campus</td>
+                <td>1.020267099</td>
+                <td>670</td>
+                <td>79,767,884</td>
+                <td>12.5</td>
+              </tr>
+              <tr>
+                <td>Upper Campus</td>
+                <td>0.923096497</td>
+                <td>715</td>
+                <td>94,218,901</td>
+                <td>13.5</td>
+              </tr>
+              <tr>
+                <td>SMBU</td>
+                <td>0.908184476</td>
+                <td>563</td>
+                <td>283,31,405</td>
+                <td>16.2</td>
+              </tr>
+              <tr>
+                <td>SZIIT</td>
+                <td>1.557606058</td>
+                <td>1215</td>
+                <td>58,979,628</td>
+                <td>22.3</td>
+              </tr>
+              <tr>
+                <td>HAV</td>
+                <td>0.815080080</td>
+                <td>424</td>
+                <td>26,759,799</td>
+                <td>7.8</td>
+              </tr>
+              <tr>
+                <td>LFLS</td>
+                <td>1.466664729</td>
+                <td>1106</td>
+                <td>98,547,710</td>
+                <td>19.8</td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td>6.668</td>
+                <td>4693</td>
+                <td>627,500,327</td>
+                <td>92.1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <h2 class="title">Download Dataset</h2>
+      </div>
+      <p>
+        If you are interested in the data, please first obtained the license at the dataset link provided above
+        and send email to the correspondance according to the guidance written in the license.
+      </p>
+    </div>
+  </section>
+
+  <!--BibTex citation -->
   <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <h2 class="title">BibTex</h2>
+      </div>
       <pre><code>
-
+@misc{xiong2024gauuscene,
+  title={GauU-Scene V2: Assessing the Reliability of Image-Based Metrics with Expansive Lidar Image Dataset Using 3DGS and NeRF}, 
+  author={Butian Xiong and Nanjun Zheng and Junhua Liu and Zhen Li},
+  year={2024},
+  eprint={2404.04880},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}
       </code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
+  <!--End BibTex citation -->
 
+  <section class="section" id="BibTeX">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <h2 class="title">Acknowledgement</h2>
+      </div>
+      This website is mainly constructed and maintained by <a href="fzhwenzhou.github.io">Zihao Fang</a>. If there is any issue about the website, please email <a href="mailto:zihaofang1@link.cuhk.edu.cn">zihaofang1@link.cuhk.edu.cn</a>, or directly open an issue at the website's github repository.
+    </div>
+  </section>
 
+  <section class="section" id="BibTeX">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <h2 class="title">Disclaimer</h2>
+      </div>
+      <p>
+        According to the Law of People Republic of China, the geography measurement information classified level conent:
+        <a href="https://www.gov.cn/zhengce/zhengceku/2020-07/08/5525075/files/08e817f622814c4799255f2464bf9ed5.pdf">https://www.gov.cn/zhengce/zhengceku/2020-07/08/5525075/files/08e817f622814c4799255f2464bf9ed5.pdf</a> <br/>
+        The dataset we aquired is not violet any classified information law. <br/>
+        
+        The data we aquired is within 25 km² consequtive area
+        The data we aquired contain no military zone.<br/>
+        
+        根据测绘地理信息管理工作国家秘密目录，我们的项目并没有违反保密法<br/>
+        
+        我们的数据没有连续25平方公里<br/>
+        我们的数据没有包含军事禁区<br/>
+        
+        
+        
+        In case of the emergency and military requirment I quote regulation 12 and 26:<br/>
+        对于条例12和26， 我引述：<br/>
+        
+        Regulation 12<br/>
+        条例12<br/>
+        "与上述机密级条款涉及的要素、空间精度和范围相当的其它测绘地理信息成果省级以上自然资源主管部门批准的测绘成果保管单位及用户；战区、军兵种以上军队测绘部门批准的军事测绘成果保管单位及用户；战区、军兵种以上军事设施建设部门批准的军用土地测绘成果保管单位及用户"<br/>
+        
+         
+        Regulation 26<br/>
+        条例 26<br/>
+        "与上述秘密级条款涉及的要素、空间精度和范围相当的其它测绘地理信息成果:县级以上自然资源主管部门批准的测绘成果保管单位及用户；战区、军兵种以上军队测绘部门批准的军事测绘成果保管单位及用户；战区、军兵种以上军事设施建设部门批准的军用土地测绘成果保管单位及用户"<br/>
+        "本规定第 12 项、第 26 项中“其它测绘地理信息成果”的定密标准和管理范围，由自然资源部会同国家保密局，商军委联合参谋部共同确定"<br/>
+        
+        
+        We are not aware how the regulation is set, please direct contact Butian Xiong Mainland China Phone: 18995627598<br/>
+        
+        如果违反条例12或26，我们并不知情。如果要处理数据，或者下架数据最快可拨打熊步天，18995627598，中国大陆的电话。<br/>
+        </p>
+    </div>
+  </section>
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter tracking code -->
 
-    <!-- End of Statcounter Code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-  </body>
-  </html>
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
